@@ -35,6 +35,7 @@
     font-weight: 500;
 }
 
+
 .timeContainer {
     display: flex;
     align-items: center; 
@@ -42,13 +43,58 @@
 }
 
 .feedIcon, .feed, .arrow, .subfeed, .timeIcon, .time {
-    margin-right: 10px; 
+    margin: 0 3px 0 4px; 
 }
 
 .time, .timeIcon {
-    font-weight: 200;
+    font-size: 14px;
+    font-weight: 300;
     color: #49494F;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.PostTitle {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid#ECECF1;
+}
+
+.Title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.logoTitle {
+    padding-right: 20px;
+}
+
+.NewsBlock {
+    padding: 30px;
+}
+.NewsText {
+    font-size: 18px;
+    font-weight: 300;
+    color: #49494F;
+    line-height: 1.3;
+    padding-bottom: 5px;
+}
+
+.NewsImage {
+    width: 295px; /* Establece el ancho fijo de la caja */
+    height: 295px; /* Establece la altura fija de la caja */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    display: flex;
+    justify-content: center; /* Centra la imagen dentro del contenedor */
+    align-items: center; /* Centra la imagen verticalmente */
+    margin: 20px auto; /* Centra la caja de la imagen y añade margen superior */
+}
+
+.imagePost {
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
+    max-height: 100%; /* Asegura que la imagen no sea más alta que el contenedor */
+    object-fit: cover; /* Ajusta la imagen para que ocupe toda la caja */
+    border-radius: 5px; /* Opcional: añade bordes redondeados a la imagen */
 }
