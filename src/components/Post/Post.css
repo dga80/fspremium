@@ -1,0 +1,54 @@
+.Post {
+    width: 90%; 
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #DDDEDF; 
+    margin: 20px auto; 
+    box-shadow: 0px 0px 5px rgba(134, 134, 134, 0.1);
+}
+.headPost {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    background-color: #ECECF1;
+    height: 44px; /* Fija la altura de headPost */
+    padding: 0 10px; /* Opcional: añade padding si deseas espacio alrededor del contenido */
+}
+
+.feedContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.feedRoute {
+    display: flex;
+    align-items: center;
+}
+
+.feed {
+    color: #304C70;
+    font-weight: 500;
+}
+.subfeed {
+    color: #7598C4;
+    font-weight: 500;
+}
+
+.timeContainer {
+    display: flex;
+    align-items: center; 
+    margin-left: auto; 
+}
+
+.feedIcon, .feed, .arrow, .subfeed, .timeIcon, .time {
+    margin-right: 10px; 
+}
+
+.time, .timeIcon {
+    font-weight: 200;
+    color: #49494F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
