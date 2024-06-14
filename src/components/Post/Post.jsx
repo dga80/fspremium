@@ -5,10 +5,13 @@ import searchIcon from '../../elements/File search.png'
 import arrow from '../../elements/Arrow icon.png'
 import clock from '../../elements/Clock icon.png'
 import imagePost from '../../elements/girasol.jpg'
-
+import heart from '../../elements/HeartIcon.svg'
+import bookmark from '../../elements/Bookmark icon.svg'
+import filter from '../../elements/filter.svg'
 const Post = () => {
     return (
         <div className='Post'>
+
             <div className='headPost'>
                 <div className='feedContainer'>
                     <div className='feedRoute'>
@@ -46,6 +49,23 @@ const Post = () => {
                 </div>
                 <div className='NewsImage'>
                     <img src={imagePost} alt="imagePost" className='imagePost' />
+                </div>
+            </div>
+            <div className='BottomPost'>
+                <div className='like'>
+                    <div className='likeIcon'>
+                        <img src={heart} alt="heart" className='heart' />
+                    </div>
+                    <div className='likeText'>Like</div>
+                </div>
+                <div className='save'>
+                    <div className='saveIcon'>
+                        <img src={bookmark} alt="bookmark" className='bookmark' />
+                    </div>
+                    <div className='saveText'>Save</div>
+                </div>
+                <div className='filter'>
+                    <img src={filter} alt="filter" className='filter' />
                 </div>
             </div>
 

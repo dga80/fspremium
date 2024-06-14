@@ -1,0 +1,37 @@
+.menuPost {
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto; 
+    margin-top: 50px;
+}
+
+.menuButtons1, .menuButtons2 {
+    display: flex;
+    align-items: center;
+}
+
+.latest, .popular, .show, .all, .downArrow {
+    cursor: pointer;
+    transition: color 0.3s; 
+}
+
+.latest:hover, .popular:hover, .latest.active, .popular.active {
+    color: #F0871B; 
+}
+
+.latest.active, .popular.active {
+    color: #F0871B;
+}
+
+.latest, .popular {
+    padding-right: 60px;
+}
+
+.show, .all {
+    padding-left: 20px;
+}
+
+.downArrow {
+    padding-left: 10px;
+}
