@@ -4,7 +4,7 @@ import logoTitle from '../../elements/Avatar.png'
 import searchIcon from '../../elements/File search.png'
 import arrow from '../../elements/Arrow icon.png'
 import clock from '../../elements/Clock icon.png'
-import imagePost from '../../elements/image-webinar.jpg'
+import imagePost from '../../elements/girasol.jpg'
 
 const Post = () => {
     return (

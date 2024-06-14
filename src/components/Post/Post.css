@@ -1,7 +1,7 @@
 .Post {
     width: 90%; 
     background-color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 1px solid #DDDEDF; 
     margin: 20px auto; 
     box-shadow: 0px 0px 5px rgba(134, 134, 134, 0.1);
@@ -83,18 +83,17 @@
 }
 
 .NewsImage {
-    width: 295px; /* Establece el ancho fijo de la caja */
-    height: 295px; /* Establece la altura fija de la caja */
-    overflow: hidden; /* Asegura que la imagen no se desborde */
+    width: auto; 
+    height: 295px; 
+    overflow: hidden; 
     display: flex;
-    justify-content: center; /* Centra la imagen dentro del contenedor */
-    align-items: center; /* Centra la imagen verticalmente */
-    margin: 20px auto; /* Centra la caja de la imagen y añade margen superior */
+    justify-content: center;
+    align-items: center; 
+    margin: 20px auto; 
 }
 
 .imagePost {
-    max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
-    max-height: 100%; /* Asegura que la imagen no sea más alta que el contenedor */
-    object-fit: cover; /* Ajusta la imagen para que ocupe toda la caja */
-    border-radius: 5px; /* Opcional: añade bordes redondeados a la imagen */
+    max-width: 100%; 
+    max-height: auto; 
+    object-fit: cover; 
 }
