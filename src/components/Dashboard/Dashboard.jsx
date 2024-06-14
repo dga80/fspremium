@@ -4,11 +4,12 @@ import Post from '../Post/Post'
 import MenuPost from '../MenuPost/MenuPost'
 
 const Dashboard = () => {
+
     return (
         <div className="Dashboard">
             <MenuPost />
             <Post />
-            <Post />
+
         </div>
     )
 }
