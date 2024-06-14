@@ -1,20 +1,19 @@
 .Post {
-    width: 90%; 
+    width: 90%;
     background-color: white;
     border-radius: 8px;
-    border: 1px solid #DDDEDF; 
-    margin: 20px auto; 
+    border: 1px solid #DDDEDF;
+    margin: 20px auto;
     box-shadow: 0px 0px 5px rgba(134, 134, 134, 0.1);
 }
-
 
 .headPost {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Alinea los elementos verticalmente al centro */
+    align-items: center;
     background-color: #ECECF1;
-    height: 44px; /* Fija la altura de headPost */
-    padding: 0 10px; /* Opcional: añade padding si deseas espacio alrededor del contenido */
+    height: 44px;
+    padding: 0 10px;
 }
 
 .feedContainer {
@@ -32,23 +31,29 @@
     color: #304C70;
     font-weight: 500;
 }
+
 .subfeed {
     color: #7598C4;
     font-weight: 500;
 }
 
-
 .timeContainer {
     display: flex;
-    align-items: center; 
-    margin-left: auto; 
+    align-items: center;
+    margin-left: auto;
 }
 
-.feedIcon, .feed, .arrow, .subfeed, .timeIcon, .time {
-    margin: 0 3px 0 4px; 
+.feedIcon,
+.feed,
+.arrow,
+.subfeed,
+.timeIcon,
+.time {
+    margin: 0 3px 0 4px;
 }
 
-.time, .timeIcon {
+.time,
+.timeIcon {
     font-size: 14px;
     font-weight: 300;
     color: #49494F;
@@ -60,7 +65,7 @@
 .PostTitle {
     display: flex;
     padding: 20px;
-    border-bottom: 1px solid#ECECF1;
+    border-bottom: 1px solid #ECECF1;
 }
 
 .Title {
@@ -76,6 +81,7 @@
 .NewsBlock {
     padding: 30px 30px 0 30px;
 }
+
 .NewsText {
     font-size: 18px;
     font-weight: 300;
@@ -85,54 +91,108 @@
 }
 
 .NewsImage {
-    width: auto; 
-    height: 295px; 
-    overflow: hidden; 
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    margin: 20px auto; 
+    position: relative;
+    width: 100%;
+    height: 295px;
+    overflow: hidden;
 }
 
-.imagePost {
-    max-width: 100%; 
-    max-height: auto; 
-    object-fit: cover; 
+.newsImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.block1 {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.authBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.authPhoto {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #304C70;
+}
+
+.nameAndCorp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 30%;
+    background-color: #7598C4;
+    margin-left: 10px;
+}
+
+.block2 {
+    background-color: bisque;
+    width: 100%;
+    height: 30%;
 }
 
 .BottomPost {
     display: flex;
-    justify-content:flex-start;
-    padding: 0 0 20px 28px; 
+    justify-content: flex-start;
+    padding: 0 0 20px 28px;
 }
 
-.like, .save {
+.like,
+.save {
     display: flex;
-    align-items: center; 
+    align-items: center;
     padding-right: 50px;
     cursor: pointer;
-    transition: color 0.3s; 
-    color: inherit; 
+    transition: color 0.3s;
+    color: inherit;
 }
 
-.likeIcon img, .saveIcon img {
+.likeIcon img,
+.saveIcon img {
     height: 20px;
     transition: fill 0.3s;
     padding-right: 10px;
 }
-.likeText .saveText {
+
+.likeText,
+.saveText {
     padding-bottom: 10px;
 }
 
-.like:hover, .save:hover {
-    color: red; 
+.like:hover,
+.save:hover {
+    color: red;
 }
 
-.like.active, .save.active {
+.like.active,
+.save.active {
     color: green;
 }
 
 .filter {
     cursor: pointer;
 }
-
