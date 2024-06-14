@@ -7,8 +7,12 @@ body {
   .bllueBrand {
     color: #242D38;
   }
+  .blue2brand {
+    color: #304C70;
+  }
 
   :root {
     --orangeBrand: #F0871B;
     --blueBrand: #242D38;
+    --blue2brand: #304C70;
   }
