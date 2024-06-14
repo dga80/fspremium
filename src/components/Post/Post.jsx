@@ -50,7 +50,7 @@ const Post = () => {
                     <div className='overlay'>
                         <div className='block1'>
                             <div className='authBox'>
-                                <div className='authPhoto'></div>
+                                <div className='authPhoto' style={{ backgroundImage: `url(${imagePost})` }}></div>
                             </div>
                             <div className='nameAndCorp'>NN</div>
                         </div>
