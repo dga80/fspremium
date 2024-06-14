@@ -139,21 +139,31 @@
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    background-color: #304C70; /* Backup color */
+    background-color: var(--blueBrand); /* Backup color */
 }
 
 .nameAndCorp {
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
     height: 30%;
-    background-color: #7598C4;
+    background-color: var(--orangeBrand);
     margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
 }
 
 .block2 {
-    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    background-color: var(--blueBrand);
     width: 100%;
     height: 30%;
 }

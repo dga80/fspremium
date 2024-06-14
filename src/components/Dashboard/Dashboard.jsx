@@ -8,6 +8,7 @@ const Dashboard = () => {
         <div className="Dashboard">
             <MenuPost />
             <Post />
+            <Post />
         </div>
     )
 }

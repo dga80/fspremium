@@ -4,4 +4,11 @@ body {
   .orangeBrand {
     color: #F0871B;
   }
+  .bllueBrand {
+    color: #242D38;
+  }
 
+  :root {
+    --orangeBrand: #F0871B;
+    --blueBrand: #242D38;
+  }

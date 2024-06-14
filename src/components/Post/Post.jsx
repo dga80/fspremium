@@ -1,5 +1,6 @@
 import React from 'react';
 import './Post.css';
+import '../../assets/styles.css'
 import logoTitle from '../../elements/Avatar.png';
 import searchIcon from '../../elements/File search.png';
 import arrow from '../../elements/Arrow icon.png';
@@ -52,9 +53,9 @@ const Post = () => {
                             <div className='authBox'>
                                 <div className='authPhoto' style={{ backgroundImage: `url(${imagePost})` }}></div>
                             </div>
-                            <div className='nameAndCorp'>NN</div>
+                            <div className='nameAndCorp'>manuel maldonado | FxStreet</div>
                         </div>
-                        <div className='block2'></div>
+                        <div className='block2'>Lorem Ipsum dolor sit amet</div>
                     </div>
                 </div>
             </div>

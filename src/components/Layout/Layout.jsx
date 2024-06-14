@@ -12,7 +12,6 @@ const Layout = () => {
             <div className='container'>
                 <div className='SideMenu'>
                     <SideMenu />
-                    <h1>H<br />H<b />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br />H<br /></h1>
                 </div>
                 <div className='NavMenuTop'>
                     <NavMenuTop />
