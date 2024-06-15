@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import parse from 'html-react-parser';
 import './Post.css';
 import '../../assets/styles.css';
 import logoTitle from '../../elements/Avatar.png';
@@ -8,6 +9,8 @@ import clock from '../../elements/Clock icon.png';
 import heart from '../../elements/HeartIcon.svg';
 import bookmark from '../../elements/Bookmark icon.svg';
 import filter from '../../elements/filter.svg';
+import imagePost from '../../elements/girasol.jpg';
+
 
 const Post = () => {
     const [data, setData] = useState([]);
@@ -56,7 +59,19 @@ const Post = () => {
                         </div>
                     </div>
                     <div className='NewsBlock'>
-                        <div className='NewsText' dangerouslySetInnerHTML={{ __html: item.content }} />
+                        <div className='NewsText'>{parse(item.content)}</div>
+                        <div className='NewsImage'>
+                            <img src={imagePost} alt="" className='newsImage' />
+                            <div className='overlay'>
+                                <div className='block1'>
+                                    <div className='authBox'>
+                                        <div className='authPhoto' style={{ backgroundImage: `url(${item.author.imageUrl})` }}></div>
+                                    </div>
+                                    <div className='nameAndCorp'>{item.author.name} | {item.author.companyName}</div>
+                                </div>
+                                <div className='block2'>{item.title}</div>
+                            </div>
+                        </div>
                     </div>
                     <div className='BottomPost'>
                         <div className='like'>
