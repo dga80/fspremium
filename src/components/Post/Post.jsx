@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Post.css';
-import '../../assets/styles.css';
+import '../../assets/styles.css'
 import logoTitle from '../../elements/Avatar.png';
 import searchIcon from '../../elements/File search.png';
 import arrow from '../../elements/Arrow icon.png';
@@ -11,19 +11,17 @@ import bookmark from '../../elements/Bookmark icon.svg';
 import filter from '../../elements/filter.svg';
 
 const Post = () => {
-    const [data, setData] = useState([]);
 
-    const fetchData = useCallback(async () => {
-        const response = await fetch('https://run.mocky.io/v3/96314262-67b1-455b-a2b2-ef1711d4634c');
-        const data = await response.json();
-        setData(data);
-        console.log(data);
-    }, []);
+    const [data, setData] = useState([])
+    async function fetchData() {
+        const response = await fetch('https://run.mocky.io/v3/96314262-67b1-455b-a2b2-ef1711d4634c')
+        const result = await response.json();
+        setData(result);
+    }
 
     useEffect(() => {
-        fetchData();
-    }, [fetchData]);
-
+        fetchData()
+    }, [])
     return (
         <>
             {data.map((item) => (
@@ -58,9 +56,7 @@ const Post = () => {
                         </div>
                     </div>
                     <div className='NewsBlock'>
-                        <div className='NewsText'>
-                            {item.content}
-                        </div>
+                        <div className='NewsText' dangerouslySetInnerHTML={{ __html: item.content }} />
                         <div className='NewsImage'>
                             <img src={imagePost} alt="" className='newsImage' />
                             <div className='overlay'>
