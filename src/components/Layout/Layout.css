@@ -1,41 +1,52 @@
 html, body {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
 .container {
-    display: grid;
-    grid-template-columns: 255px 2fr 1fr; 
-    grid-template-rows: 65px auto;
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
+  display: grid;
+  grid-template-columns: 255px 2fr 1fr;
+  grid-template-rows: 65px auto;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
       "SideMenu NavMenuTop NavMenuTop"
       "SideMenu Dashboard AdsSideBar";
+}
+
+.SideMenu {
+  grid-area: SideMenu;
+  background-color: #242D38;
+}
+.SideMenu h1 {
+  color: #242D38;
+}
+
+.NavMenuTop {
+  grid-area: NavMenuTop;
+  background-color: #FFF;
+}
+
+.DashBoard {
+  grid-area: Dashboard;
+  background-color: #ECECF1;
+}
+
+.AdsSideBar {
+  grid-area: AdsSideBar;
+  background-color: #ECECF1;
+  border-left: 1px solid #929292;
+}
+
+@media (max-width: 900px) {
+  .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+          "Dashboard";
   }
-  
-  .SideMenu {
-    grid-area: SideMenu;
-    background-color: #242D38;
+
+  .SideMenu, .NavMenuTop, .AdsSideBar {
+      display: none;
   }
-  .SideMenu h1 {
-    color: #242D38;
-  }
-  
-  .NavMenuTop {
-    grid-area: NavMenuTop;
-    background-color: #FFF;
-  }
-  
-  .DashBoard {
-    grid-area: Dashboard;
-    background-color: #ECECF1;
-  }
-  
-  .AdsSideBar {
-    grid-area: AdsSideBar;
-    background-color: #ECECF1;
-    border-left: 1px solid #929292;
-  }
-  
-  
+}
