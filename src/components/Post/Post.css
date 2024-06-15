@@ -227,3 +227,13 @@
 .filter {
     cursor: pointer;
 }
+
+
+@media (max-width: 900px){
+    .subfeed {
+        font-size: 12px;
+    }
+    .time {
+        font-size: 10px;
+    }
+}

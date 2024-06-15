@@ -35,3 +35,9 @@
 .downArrow {
     padding-left: 10px;
 }
+
+@media (max-width: 900px) {
+    .menuPost {
+        margin-top: 30px;
+    }
+}
