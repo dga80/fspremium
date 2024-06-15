@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import parse from 'html-react-parser';
+import parse from 'react-html-parser';
 import './Post.css';
 import '../../assets/styles.css';
 import logoTitle from '../../elements/Avatar.png';
