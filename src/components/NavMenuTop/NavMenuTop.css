@@ -41,15 +41,15 @@ html, body {
 }
 
 .profile-button {
-  display: flex; /* Usamos flexbox para alinear los elementos */
-  align-items: center; /* Alinea los elementos verticalmente al centro */
+  display: flex; 
+  align-items: center; 
   padding: 0 50px;
 }
 
 .profile-icon-svg {
-  width: 15px; /* Ajusta el tamaño del icono según sea necesario */
+  width: 15px; 
   height: 15px;
-  margin: 0 7px 3px 0; /* Espacio entre el icono y el texto */
+  margin: 0 7px 3px 0; 
 }
 .profile-text {
   margin-left: 5px;

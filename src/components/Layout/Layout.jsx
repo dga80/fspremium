@@ -4,6 +4,7 @@ import NavMenuTop from '../NavMenuTop/NavMenuTop'
 import SideMenu from '../SideMenu/SideMenu'
 import Dashboard from '../Dashboard/Dashboard'
 import AdsSideBar from '../AdsSideBar/AdsSideBar'
+import NavMenuTopMobile from '../NavMenuTopMobile/NavMenuTopMobile'
 
 
 const Layout = () => {
@@ -15,6 +16,9 @@ const Layout = () => {
                 </div>
                 <div className='NavMenuTop'>
                     <NavMenuTop />
+                </div>
+                <div className='NavMenuTopMobile'>
+                    <NavMenuTopMobile />
                 </div>
                 <div className='DashBoard'>
                     <Dashboard />
