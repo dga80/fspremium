@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import './Post.css';
-import '../../assets/styles.css'
+import '../../assets/styles.css';
 import logoTitle from '../../elements/Avatar.png';
 import searchIcon from '../../elements/File search.png';
 import arrow from '../../elements/Arrow icon.png';
 import clock from '../../elements/Clock icon.png';
-import imagePost from '../../elements/girasol.jpg';
 import heart from '../../elements/HeartIcon.svg';
 import bookmark from '../../elements/Bookmark icon.svg';
 import filter from '../../elements/filter.svg';
 
 const Post = () => {
+    const [data, setData] = useState([]);
 
-    const [data, setData] = useState([])
     async function fetchData() {
-        const response = await fetch('https://run.mocky.io/v3/96314262-67b1-455b-a2b2-ef1711d4634c')
+        const response = await fetch('https://run.mocky.io/v3/96314262-67b1-455b-a2b2-ef1711d4634c');
         const result = await response.json();
         setData(result);
     }
 
     useEffect(() => {
-        fetchData()
-    }, [])
+        fetchData();
+    }, []);
+
     return (
         <>
             {data.map((item) => (
@@ -57,18 +57,6 @@ const Post = () => {
                     </div>
                     <div className='NewsBlock'>
                         <div className='NewsText' dangerouslySetInnerHTML={{ __html: item.content }} />
-                        <div className='NewsImage'>
-                            <img src={imagePost} alt="" className='newsImage' />
-                            <div className='overlay'>
-                                <div className='block1'>
-                                    <div className='authBox'>
-                                        <div className='authPhoto' style={{ backgroundImage: `url(${item.author.imageUrl})` }}></div>
-                                    </div>
-                                    <div className='nameAndCorp'>{item.author.name} | {item.author.companyName}</div>
-                                </div>
-                                <div className='block2'>{item.title}</div>
-                            </div>
-                        </div>
                     </div>
                     <div className='BottomPost'>
                         <div className='like'>
