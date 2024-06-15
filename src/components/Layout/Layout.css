@@ -17,6 +17,12 @@ html, body {
 .SideMenu {
   grid-area: SideMenu;
   background-color: #242D38;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 255px;
+  z-index: 1; 
 }
 .SideMenu h1 {
   color: #242D38;

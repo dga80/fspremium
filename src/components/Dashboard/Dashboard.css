@@ -1,0 +1,13 @@
+.menu-post-mobile {
+    display: none; 
+}
+
+@media (max-width: 900px) {
+    .menu-post-desktop {
+        display: none; 
+    }
+
+    .menu-post-mobile {
+        display: block; 
+    }
+}
