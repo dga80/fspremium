@@ -11,7 +11,6 @@ import bookmark from '../../elements/Bookmark icon.svg';
 import filter from '../../elements/filter.svg';
 import imagePost from '../../elements/girasol.jpg';
 
-
 const Post = () => {
     const [data, setData] = useState([]);
 
@@ -24,6 +23,14 @@ const Post = () => {
     useEffect(() => {
         fetchData();
     }, []);
+
+    const formatDateTime = (dateString) => {
+        const options = { month: 'short', day: '2-digit' };
+        const date = new Date(dateString);
+        const formattedDate = date.toLocaleDateString('en-US', options);
+        const formattedTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+        return `${formattedDate}, ${formattedTime}`;
+    };
 
     return (
         <>
@@ -45,7 +52,7 @@ const Post = () => {
                                 <div className='timeIcon'>
                                     <img src={clock} alt="" className='clock' />
                                 </div>
-                                <div className='time'>Sep 06, 07:45</div>
+                                <div className='time'>{formatDateTime(item.publicationTime)}</div>
                             </div>
                         </div>
                     </div>
@@ -94,6 +101,6 @@ const Post = () => {
             ))}
         </>
     );
-}
+};
 
 export default Post;
