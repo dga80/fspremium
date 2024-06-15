@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './Post.css';
-import '../../assets/styles.css'
+import '../../assets/styles.css';
 import logoTitle from '../../elements/Avatar.png';
 import searchIcon from '../../elements/File search.png';
 import arrow from '../../elements/Arrow icon.png';
@@ -11,17 +11,19 @@ import bookmark from '../../elements/Bookmark icon.svg';
 import filter from '../../elements/filter.svg';
 
 const Post = () => {
+    const [data, setData] = useState([]);
 
-    const [data, setData] = useState([])
-    async function fetchData() {
-        const response = await fetch('https://run.mocky.io/v3/96314262-67b1-455b-a2b2-ef1711d4634c')
-        setData(await response.json())
-        console.log(data)
-    }
+    const fetchData = useCallback(async () => {
+        const response = await fetch('https://run.mocky.io/v3/96314262-67b1-455b-a2b2-ef1711d4634c');
+        const data = await response.json();
+        setData(data);
+        console.log(data);
+    }, []);
 
     useEffect(() => {
-        fetchData()
-    }, [])
+        fetchData();
+    }, [fetchData]);
+
     return (
         <>
             {data.map((item) => (
