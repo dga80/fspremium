@@ -236,4 +236,23 @@
     .time {
         font-size: 10px;
     }
+    .authPhoto {
+        width: 100px;
+        height: 100px;
+    }
+    .nameAndCorp {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .overlay {
+        height: 60%;
+    }
+    .NewsImage {
+        height: 50%;
+    }
+    .block2 {
+        padding: 10px;
+        font-size: 18px;
+    }
+
 }

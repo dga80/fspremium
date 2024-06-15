@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import parse from 'html-react-parser';
-import './Post.css';
 import '../../assets/styles.css';
+import './Post.css';
 import logoTitle from '../../elements/Avatar.png';
 import searchIcon from '../../elements/File search.png';
 import arrow from '../../elements/Arrow icon.png';
