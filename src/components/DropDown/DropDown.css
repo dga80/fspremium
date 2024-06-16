@@ -1,0 +1,40 @@
+.unique-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.unique-dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.unique-dropbtn img {
+    width: 14px; 
+    height: auto;
+    margin-left: 10px;
+}
+
+.unique-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    top: 30px;
+    left: -100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 15;
+}
+
+.unique-dropdown-content a {
+    color: rgb(93, 93, 93);
+    padding: 10px  2px 10px 9px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+.unique-dropdown-content.show {
+    display: block;
+}

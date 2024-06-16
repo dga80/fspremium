@@ -1,7 +1,6 @@
 import React from 'react';
 import './MenuPost.css';
-import downArrow from '../../elements/Icon dropdown.png';
-
+import DropDown from '../DropDown/DropDown';
 const MenuPost = ({ showLatest, showPopular, isPopular }) => {
     return (
         <div className='menuPost'>
@@ -12,9 +11,7 @@ const MenuPost = ({ showLatest, showPopular, isPopular }) => {
             <div className='menuButtons2'>
                 <div className='show'>Show:</div>
                 <div className='all'>All</div>
-                <div className='downArrow'>
-                    <img src={downArrow} alt="downArrow" className='downArrow' />
-                </div>
+                <DropDown />
             </div>
         </div>
     );

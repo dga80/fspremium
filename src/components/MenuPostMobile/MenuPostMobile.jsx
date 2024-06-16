@@ -1,7 +1,8 @@
 import React from 'react';
 import './MenuPostMobile.css';
-import { ReactComponent as FilterMobile } from '../../elements/FilterMobile.svg';
+// import { ReactComponent as FilterMobile } from '../../elements/FilterMobile.svg';
 
+import DropDownMobile from '../DropDownMobile/DropDownMobile';
 const MenuPost = ({ showLatest, showPopular, isPopular }) => {
     return (
         <div className='menuPost'>
@@ -11,7 +12,7 @@ const MenuPost = ({ showLatest, showPopular, isPopular }) => {
             </div>
             <div className='menuButtons2'>
                 <div className='filterMobile'>
-                    <FilterMobile className='filterMobile-svg' />
+                    <DropDownMobile />
                 </div>
             </div>
         </div>
