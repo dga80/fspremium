@@ -13,7 +13,7 @@ import imagePost from '../../elements/girasol.jpg';
 // import Filter from '../../components/Filter/Filter'
 import BottomPost from '../BottomPost/BottomPost';
 
-const Post = () => {
+const Post = ({ showPopular }) => {
     const [data, setData] = useState([]);
 
     async function fetchData() {
@@ -34,9 +34,14 @@ const Post = () => {
         return `${formattedDate}, ${formattedTime}`;
     };
 
+    // Filter posts based on showPopular prop
+    const filteredPosts = showPopular
+        ? data.filter(post => post.isPopular).slice(0, 1)
+        : data.filter(post => !post.isPopular).slice(0, 2);
+
     return (
         <>
-            {data.map((item) => (
+            {filteredPosts.map((item) => (
                 <div className='Post' key={item.id}>
                     <div className='headPost'>
                         <div className='feedContainer'>
@@ -88,7 +93,6 @@ const Post = () => {
                     </div>
                 </div>
             ))}
-
         </>
     );
 };
