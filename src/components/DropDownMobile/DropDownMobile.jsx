@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../DropDown/DropDown.css';
+import '../DropDownMobile/DropDownMobile.css'
 import FilterMobile from '../../elements/FilterMobile.svg';
 
 const DropDownMobile = () => {
@@ -25,7 +26,7 @@ const DropDownMobile = () => {
 
     return (
         <div className="unique-dropdown" ref={dropdownRef}>
-            <button className="unique-dropbtn" onClick={toggleDropdown}>
+            <button className="unique-dropbtn filter-mobile" onClick={toggleDropdown}>
                 <img src={FilterMobile} alt="Dropdown icon" />
             </button>
             <div className={`unique-dropdown-content ${showDropdown ? 'show' : ''}`}>

@@ -1,0 +1,16 @@
+.filter-mobile {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.filter-mobile img {
+    width: 20px; 
+    height: auto;
+    transition: width 0.3s ease; 
+}
+
+.filter-mobile.active img {
+    width: 28px; 
+}
