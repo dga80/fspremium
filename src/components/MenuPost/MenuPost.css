@@ -16,8 +16,8 @@
     transition: color 0.3s; 
 }
 
-.latest:hover, .popular:hover, .latest.active, .popular.active {
-    color: #F0871B; 
+.latest:hover, .popular:hover {
+    color: #2424bd; 
 }
 
 .latest.active, .popular.active {

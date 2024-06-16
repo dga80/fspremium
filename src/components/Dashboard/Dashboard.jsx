@@ -7,7 +7,7 @@ import MenuPostMobile from '../MenuPostMobile/MenuPostMobile';
 const Dashboard = () => {
     const [isPopular, setIsPopular] = useState(false);
 
-    const showLatest = () => {
+    const showLatestPosts = () => {
         setIsPopular(false);
     };
 
@@ -18,10 +18,16 @@ const Dashboard = () => {
     return (
         <div className="Dashboard">
             <div className="menu-post-desktop">
-                <MenuPost showLatest={showLatest} showPopular={showPopularPosts} isPopular={isPopular} />
+                <MenuPost
+                    showLatest={showLatestPosts}
+                    showPopular={showPopularPosts}
+                    isPopular={isPopular} />
             </div>
             <div className="menu-post-mobile">
-                <MenuPostMobile showLatest={showLatest} showPopular={showPopularPosts} isPopular={isPopular} />
+                <MenuPostMobile
+                    showLatest={showLatestPosts}
+                    showPopular={showPopularPosts}
+                    isPopular={isPopular} />
             </div>
             <Post showPopular={isPopular} />
         </div>

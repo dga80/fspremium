@@ -6,8 +6,6 @@ import logoTitle from '../../elements/Avatar.png';
 import searchIcon from '../../elements/File search.png';
 import arrow from '../../elements/Arrow icon.png';
 import clock from '../../elements/Clock icon.png';
-// import heart from '../../elements/HeartIcon.svg';
-// import bookmark from '../../elements/Bookmark icon.svg';
 import filter from '../../elements/filter.svg';
 import imagePost from '../../elements/girasol.jpg';
 // import Filter from '../../components/Filter/Filter'
@@ -34,7 +32,6 @@ const Post = ({ showPopular }) => {
         return `${formattedDate}, ${formattedTime}`;
     };
 
-    // Filter posts based on showPopular prop
     const filteredPosts = showPopular
         ? data.filter(post => post.isPopular).slice(0, 1)
         : data.filter(post => !post.isPopular).slice(0, 2);
