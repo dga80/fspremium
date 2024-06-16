@@ -39,6 +39,11 @@ const Filter = () => {
         };
     }, []);
 
+    const hideDropdown = () => {
+        setShowDropdown(false);
+        setShowSubmenu(false);
+    };
+
     return (
         <div className="dropdown" ref={dropdownRef}>
             <button className="dropbtn" onClick={toggleDropdown}>•••</button>
@@ -59,6 +64,7 @@ const Filter = () => {
                     <button><img src={circle} alt="circle icon" />The information is incorrect</button>
                     <button><img src={circle} alt="circle icon" />I've seen this post before</button>
                     <button><img src={circle} alt="circle icon" />Other reasons</button>
+                    <div className="hideContent" onClick={hideDropdown}>Hide content</div>
                 </div>
             </div>
         </div>
