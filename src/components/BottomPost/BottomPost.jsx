@@ -6,7 +6,7 @@ import like3 from '../../elements/Like-active.png';
 import save1 from '../../elements/Save-passive.png';
 import save2 from '../../elements/Save-hover.png';
 import save3 from '../../elements/Save-active.png';
-import filter from '../../elements/filter.svg';
+// import filter from '../../elements/filter.svg';
 
 const BottomPost = () => {
     const [likeActive, setLikeActive] = useState(false);
@@ -41,7 +41,7 @@ const BottomPost = () => {
                 />
             </div>
             <div className='filter'>
-                <img src={filter} alt="filter" className='filter-img' />
+                {/* <img src={filter} alt="filter" className='filter-img' /> */}
             </div>
         </div>
     );
