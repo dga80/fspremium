@@ -64,7 +64,9 @@ const Filter = () => {
                     <button><img src={circle} alt="circle icon" />The information is incorrect</button>
                     <button><img src={circle} alt="circle icon" />I've seen this post before</button>
                     <button><img src={circle} alt="circle icon" />Other reasons</button>
-                    <div className="hideContent" onClick={hideDropdown}>Hide content</div>
+                    <div className="hideBox">
+                        <div className="hideContent" onClick={hideDropdown}>Hide content</div>
+                    </div>
                 </div>
             </div>
         </div>
