@@ -1,10 +1,11 @@
 /* dropdown.css */
 .dropbtn {
-    background-color: #acacac;
-    color: white;
-    font-size: 16px;
+    color: #8C8D91;
+    font-size: 24px;
     border: none;
     cursor: pointer;
+    background: none;
+    margin-left: 5px; /* Sin color de fondo */
 }
 
 .dropdown {
@@ -17,30 +18,58 @@
     position: absolute;
     background-color: #f9f9f9;
     min-width: 290px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    padding: 0; /* Eliminar padding */
+    margin: 0; /* Eliminar margin */
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+.dropdown-content button,
+.dropdown-subcontent button {
+    color: black; /* Color del texto */
     text-decoration: none;
-    display: block;
+    display: flex; /* Flex display para alinear la imagen y el texto */
+    align-items: center; /* Alinear verticalmente */
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    padding: 12px 16px; /* Añadir espacio alrededor del texto */
+    margin: 0; /* Eliminar margen */
+    border-bottom: 1px solid #f1f1f1; /* Línea divisoria para separar botones */
 }
 
-.dropdown-content a:hover {
+.dropdown-content button img,
+.dropdown-subcontent button img {
+    margin-right: 8px; /* Espacio entre la imagen y el texto */
+    width: 18px; /* Ajustar el tamaño de la imagen */
+    height: auto; /* Ajustar el tamaño de la imagen */
+}
+
+.dropdown-content button:last-child,
+.dropdown-subcontent button:last-child {
+    border-bottom: none; /* Eliminar la línea divisoria del último botón */
+}
+
+.dropdown-content button:hover,
+.dropdown-subcontent button:hover {
     background-color: #f1f1f1;
 }
 
 .dropdown-subcontent {
     display: none;
     background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 290px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0; /* Asegurar que el submenú se alinee con el menú principal */
 }
 
 .dropdown-content.show {
     display: block;
+    padding: 0; /* Asegurar que no haya padding en el dropdown */
+    margin: 0; /* Asegurar que no haya margen en el dropdown */
 }
 
 .dropdown-content.show-submenu .dropdown-subcontent {

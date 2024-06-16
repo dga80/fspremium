@@ -6,7 +6,7 @@ import logoTitle from '../../elements/Avatar.png';
 import searchIcon from '../../elements/File search.png';
 import arrow from '../../elements/Arrow icon.png';
 import clock from '../../elements/Clock icon.png';
-import filter from '../../elements/filter.svg';
+// import filter from '../../elements/filter.svg';
 import imagePost from '../../elements/girasol.jpg';
 // import Filter from '../../components/Filter/Filter'
 import BottomPost from '../BottomPost/BottomPost';
@@ -86,7 +86,6 @@ const Post = ({ showPopular }) => {
                     </div>
                     <div className='BottomPost'>
                         <BottomPost />
-                        <img src={filter} alt="" className='filter' />
                     </div>
                 </div>
             ))}
