@@ -2,35 +2,43 @@
     width: 88%;
     display: flex;
     justify-content: space-between;
-    margin: 20px auto; 
+    margin: 20px auto;
     margin-top: 50px;
 }
 
-.menuButtons1, .menuButtons2 {
+.menuButtons1,
+.menuButtons2 {
     display: flex;
     align-items: center;
 }
 
-.latest, .popular, .show, .all, .downArrow {
+.latest,
+.popular,
+.show,
+.all,
+.downArrow {
     cursor: pointer;
-    transition: color 0.3s; 
+    transition: color 0.3s;
+    font-weight: 500; /* Asegurar que el texto tiene un peso de fuente adecuado */
 }
 
-.latest:hover, .popular:hover {
+.latest:hover,
+.popular:hover {
     color: #49494F;
-    font-style: normal;
-    font-weight: 500;
 }
 
-.latest.active, .popular.active {
+.latest.active,
+.popular.active {
     color: #F0871B;
 }
 
-.latest, .popular {
-    padding-right: 60px;
+.latest,
+.popular {
+    padding-right: 20px; /* Ajustar el padding para separar los elementos */
 }
 
-.show, .all {
+.show,
+.all {
     padding-left: 20px;
 }
 

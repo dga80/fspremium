@@ -1,6 +1,6 @@
-import React from 'react'
-import './MenuPostMobile.css'
-import { ReactComponent as FilterMobile } from '../../elements/FilterMobile.svg'
+import React from 'react';
+import './MenuPostMobile.css';
+import { ReactComponent as FilterMobile } from '../../elements/FilterMobile.svg';
 
 const MenuPost = ({ showLatest, showPopular, isPopular }) => {
     return (
@@ -15,6 +15,7 @@ const MenuPost = ({ showLatest, showPopular, isPopular }) => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
+
 export default MenuPost;

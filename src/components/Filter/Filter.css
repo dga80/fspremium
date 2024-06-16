@@ -4,8 +4,7 @@
     font-size: 24px;
     border: none;
     cursor: pointer;
-    background: none;
-    margin-left: 5px; /* Sin color de fondo */
+    background: none; /* Sin color de fondo */
 }
 
 .dropdown {
@@ -43,8 +42,8 @@
 .dropdown-content button img,
 .dropdown-subcontent button img {
     margin-right: 8px; /* Espacio entre la imagen y el texto */
-    width: 18px; /* Ajustar el tamaño de la imagen */
-    height: auto; /* Ajustar el tamaño de la imagen */
+    width: 16px; /* Ajustar el tamaño de la imagen */
+    height: 16px; /* Ajustar el tamaño de la imagen */
 }
 
 .dropdown-content button:last-child,
@@ -79,4 +78,24 @@
 .dropdown-content.show-submenu > .main-link,
 .dropdown-content.show-submenu > .subdropbtn {
     display: none;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 900px) {
+    .dropdown-content {
+        z-index: 4;
+        position: fixed; /* Fija la posición del dropdown */
+        bottom: 20px; /* Espacio desde la parte superior */
+        left: 5%; /* Alinea el dropdown con un margen desde el borde izquierdo */
+        right: 5%; /* Alinea el dropdown con un margen desde el borde derecho */
+        margin: 0; /* Eliminar márgenes */
+        width: 90%; /* Ajusta el ancho del dropdown */
+        max-width: 90%; /* Asegura que el dropdown no exceda el ancho */
+        box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    }
+
+    .dropdown-subcontent {
+        position: relative; /* Asegura que el submenú se comporte correctamente */
+        width: 100%; /* Asegura que el submenú se ajuste al ancho del dropdown */
+    }
 }
