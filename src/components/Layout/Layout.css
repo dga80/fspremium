@@ -24,6 +24,7 @@ html, body {
   width: 255px;
   z-index: 1; 
 }
+
 .SideMenu h1 {
   color: #242D38;
 }
@@ -56,4 +57,5 @@ html, body {
   .SideMenu, .NavMenuTop, .AdsSideBar {
       display: none;
   }
+
 }
