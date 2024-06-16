@@ -6,10 +6,12 @@ import logoTitle from '../../elements/Avatar.png';
 import searchIcon from '../../elements/File search.png';
 import arrow from '../../elements/Arrow icon.png';
 import clock from '../../elements/Clock icon.png';
-import heart from '../../elements/HeartIcon.svg';
-import bookmark from '../../elements/Bookmark icon.svg';
+// import heart from '../../elements/HeartIcon.svg';
+// import bookmark from '../../elements/Bookmark icon.svg';
 import filter from '../../elements/filter.svg';
 import imagePost from '../../elements/girasol.jpg';
+// import Filter from '../../components/Filter/Filter'
+import BottomPost from '../BottomPost/BottomPost';
 
 const Post = () => {
     const [data, setData] = useState([]);
@@ -81,24 +83,12 @@ const Post = () => {
                         </div>
                     </div>
                     <div className='BottomPost'>
-                        <div className='like'>
-                            <div className='likeIcon'>
-                                <img src={heart} alt="" className='heart' />
-                            </div>
-                            <div className='likeText'>Like</div>
-                        </div>
-                        <div className='save'>
-                            <div className='saveIcon'>
-                                <img src={bookmark} alt="" className='bookmark' />
-                            </div>
-                            <div className='saveText'>Save</div>
-                        </div>
-                        <div className='filter'>
-                            <img src={filter} alt="" className='filter' />
-                        </div>
+                        <BottomPost />
+                        <img src={filter} alt="" className='filter' />
                     </div>
                 </div>
             ))}
+
         </>
     );
 };

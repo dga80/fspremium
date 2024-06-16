@@ -1,0 +1,30 @@
+.likeSaveFilter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.like, .save, .filter {
+    cursor: pointer;
+    width: 24px; 
+    height: 18px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like-img, .save-img, .filter-img {
+    width: auto;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.like, .save {
+    position: relative;
+    width: 24px;
+    height: 18px;
+    margin-right: 50px;
+}
+
