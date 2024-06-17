@@ -14,3 +14,6 @@
 .filter-mobile.active img {
     width: 28px; 
 }
+.unique-dropdown-content a:hover {
+    color: rgb(50, 50, 50);
+}
