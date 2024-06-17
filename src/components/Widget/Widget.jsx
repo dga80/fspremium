@@ -6,14 +6,15 @@ const Widget = () => {
     const [newsIndex, setNewsIndex] = useState(0);
     const [newsData, setNewsData] = useState([]);
     const [loading, setLoading] = useState(true);
-    const apiKey = 'R7AHL29P9EZWPH5U';
+    const apiKey = '_4ztbxZgIqDyobL1czLhx55dGPya8nnG';
 
     async function fetchData() {
         try {
-            const response = await fetch(`https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=AAPL&apikey=${apiKey}`);
+            const response = await fetch(`https://api.polygon.io/v2/reference/news?limit=10&apiKey=${apiKey}`);
             const result = await response.json();
-            if (result.feed && result.feed.length > 0) {
-                setNewsData(result.feed);
+            console.log('API response:', result);
+            if (result.results && result.results.length > 0) {
+                setNewsData(result.results);
             } else {
                 console.error('No news data found');
             }
@@ -31,7 +32,7 @@ const Widget = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setNewsIndex(prevIndex => (prevIndex + 1) % newsData.length);
-        }, 9000);
+        }, 12000);
 
         return () => clearInterval(interval);
     }, [newsData]);
@@ -44,16 +45,16 @@ const Widget = () => {
         return <div className="widget">No news found</div>;
     }
 
-    const { title, summary, banner_image } = newsData[newsIndex];
+    const { title, article_url, image_url, author } = newsData[newsIndex];
 
     return (
         <div className='widget'>
             <div className='widgetBox2'>
-                <img src={banner_image} alt="Banner" className="bannerImage" />
+                <img src={image_url} alt="Banner" className="bannerImage" />
             </div>
             <div className='widgetBox1'>
                 <h4>{title}</h4>
-                <p>{summary}</p>
+                <p><a href={article_url} style={{ color: 'white' }} target="_blank" rel="noreferrer">Read more</a></p>
             </div>
         </div>
     );
