@@ -102,8 +102,7 @@
     .dropdown-content {
         z-index: 4;
         bottom: 30px; /* Ejemplo de espacio desde la parte superior */
-        left: 50%; /* Alinea el centro del dropdown con el centro de la pantalla */
-        transform: translateX(-50%); /* Centra el dropdown correctamente */
+        transform: translateX(-68%); /* Centra el dropdown correctamente */
         width: 90%; /* Ancho del dropdown */
         max-width: 90%; /* Máximo ancho */
         box-sizing: border-box; /* Incluir padding y borde en el ancho total */
