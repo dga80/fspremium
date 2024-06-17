@@ -12,7 +12,7 @@ const Filter = () => {
 
     const toggleDropdown = () => {
         setShowDropdown(!showDropdown);
-        setShowSubmenu(false); // Reset submenu when toggling main dropdown
+        setShowSubmenu(false);
     };
 
     const openSubmenu = (event) => {

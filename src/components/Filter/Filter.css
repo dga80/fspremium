@@ -19,8 +19,8 @@
     min-width: 290px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 10;
-    padding: 0; /* Eliminar padding */
-    margin: 0; /* Eliminar margin */
+    padding: 0; 
+    margin: 0; 
 }
 
 .dropdown-content button,
@@ -101,9 +101,8 @@
 @media (max-width: 900px) {
     .dropdown-content {
         z-index: 4;
-        position: fixed; /* Fija la posición del dropdown */
         bottom: 30%; /* Espacio desde la parte superior */
-        left: 5%; /* Alinea el dropdown con un margen desde el borde izquierdo */
+        left: -790%; /* Alinea el dropdown con un margen desde el borde izquierdo */
         right: 5%; /* Alinea el dropdown con un margen desde el borde derecho */
         margin: 0; /* Eliminar márgenes */
         width: 90%; /* Ajusta el ancho del dropdown */
