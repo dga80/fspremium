@@ -1,13 +1,14 @@
 .widget {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; 
     margin-top: 30px;
     margin-bottom: 30px;
+    margin-left: 0; 
 }
 
 .widgetBox1 {
-    align-items: center;
+    align-items: center; 
     justify-content: center;
     background-color: #304C70;
     color: white;
@@ -39,7 +40,7 @@
     border: 1px solid;
     border-color: #242D38;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
 }
 
@@ -52,11 +53,13 @@
 
 @media screen and (max-width: 900px) {
     .widget {
-        display: flex;
-        flex-direction: column;
         align-items: center;
         margin-top: -10px;
-        margin-bottom: 30px;
-    }    
+        margin: 0 20px 30px 20px;
+    }
 
+    .widgetBox1,
+    .widgetBox2 {
+        width: 100%; 
+    }
 }

@@ -42,7 +42,6 @@ html, body {
 .AdsSideBar {
   grid-area: AdsSideBar;
   background-color: #ECECF1;
-  border-left: 1px solid #929292;
 }
 
 @media (max-width: 900px) {

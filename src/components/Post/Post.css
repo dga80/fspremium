@@ -155,7 +155,7 @@
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    background-color: var(--blueBrand); /* Backup color */
+    background-color: var(--blueBrand);
 }
 
 .nameAndCorp {

@@ -19,7 +19,7 @@
 .downArrow {
     cursor: pointer;
     transition: color 0.3s;
-    font-weight: 500; /* Asegurar que el texto tiene un peso de fuente adecuado */
+    font-weight: 500; 
 }
 
 .latest:hover,
@@ -34,7 +34,7 @@
 
 .latest,
 .popular {
-    padding-right: 20px; /* Ajustar el padding para separar los elementos */
+    padding-right: 20px; 
 }
 
 .show,
