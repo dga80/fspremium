@@ -3,10 +3,10 @@ import './Widget.css';
 import '../../assets/styles.css';
 
 const Widget = () => {
-    const [newsIndex, setNewsIndex] = useState(0); // Índice de la noticia actual
-    const [newsData, setNewsData] = useState([]); // Datos de todas las noticias
+    const [newsIndex, setNewsIndex] = useState(0);
+    const [newsData, setNewsData] = useState([]);
     const [loading, setLoading] = useState(true);
-    const apiKey = 'R7AHL29P9EZWPH5U'; // Tu API Key
+    const apiKey = 'R7AHL29P9EZWPH5U';
 
     async function fetchData() {
         try {
@@ -18,7 +18,7 @@ const Widget = () => {
                 console.error('No se encontraron datos de noticias.');
             }
         } catch (error) {
-            console.error('Error al cargar datos de noticias:', error);
+            console.error('Error loading news:', error);
         } finally {
             setLoading(false);
         }
@@ -29,12 +29,10 @@ const Widget = () => {
     }, []);
 
     useEffect(() => {
-        // Cambiar de noticia cada 6 segundos
         const interval = setInterval(() => {
             setNewsIndex(prevIndex => (prevIndex + 1) % newsData.length);
-        }, 6000);
+        }, 9000);
 
-        // Limpiar intervalo cuando el componente se desmonte
         return () => clearInterval(interval);
     }, [newsData]);
 
