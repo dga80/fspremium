@@ -15,7 +15,7 @@ const Widget = () => {
             if (result.feed && result.feed.length > 0) {
                 setNewsData(result.feed);
             } else {
-                console.error('No se encontraron datos de noticias.');
+                console.error('No news data found');
             }
         } catch (error) {
             console.error('Error loading news:', error);
@@ -48,12 +48,12 @@ const Widget = () => {
 
     return (
         <div className='widget'>
+            <div className='widgetBox2'>
+                <img src={banner_image} alt="Banner" className="bannerImage" />
+            </div>
             <div className='widgetBox1'>
                 <h4>{title}</h4>
                 <p>{summary}</p>
-            </div>
-            <div className='widgetBox2'>
-                <img src={banner_image} alt="Banner" className="bannerImage" />
             </div>
         </div>
     );
