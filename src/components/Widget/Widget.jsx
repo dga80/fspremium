@@ -45,7 +45,7 @@ const Widget = () => {
         return <div className="widget">No news found</div>;
     }
 
-    const { title, article_url, image_url, author } = newsData[newsIndex];
+    const { title, article_url, image_url } = newsData[newsIndex];
 
     return (
         <div className='widget'>
