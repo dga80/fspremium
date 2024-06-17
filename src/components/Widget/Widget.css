@@ -49,3 +49,14 @@
     object-fit: contain; 
     padding: 18px;
 }
+
+@media screen and (max-width: 900px) {
+    .widget {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -10px;
+        margin-bottom: 30px;
+    }    
+
+}
