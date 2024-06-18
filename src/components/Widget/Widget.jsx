@@ -12,7 +12,6 @@ const Widget = () => {
         try {
             const response = await fetch(`https://api.polygon.io/v2/reference/news?limit=10&apiKey=${apiKey}`);
             const result = await response.json();
-            console.log('API response:', result);
             if (result.results && result.results.length > 0) {
                 setNewsData(result.results);
             } else {

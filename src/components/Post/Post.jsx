@@ -13,9 +13,14 @@ const Post = ({ showPopular }) => {
     const [data, setData] = useState([]);
 
     async function fetchData() {
-        const response = await fetch('https://run.mocky.io/v3/96314262-67b1-455b-a2b2-ef1711d4634c');
-        const result = await response.json();
-        setData(result);
+        try {
+            const response = await fetch('https://fxsfrontend.fxstreet.workers.dev/');
+            const result = await response.json();
+            console.log(result); // Log the result here after parsing it
+            setData(result);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
     }
 
     useEffect(() => {
